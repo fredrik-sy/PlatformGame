@@ -5,8 +5,14 @@
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+    using PlatformGame.Gameplay.Components.Templates;
+    using PlatformGame.Gameplay.Objects.Templates;
 
-    internal class Door
+    [Serializable]
+    internal class Door : GameObject
     {
+        public Door(IAnimationComponent animationComponent, params IComponent[] components) : base(animationComponent, components)
+        {
+        }
     }
 }
