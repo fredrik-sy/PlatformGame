@@ -85,6 +85,12 @@
             Refresh();
         }
 
+        public void RemoveAll(Predicate<IItem> match)
+        {
+            _items.RemoveAll(match);
+            Refresh();
+        }
+
         public void Refresh()
         {
             Rectangle contentBounds = _bounds;
