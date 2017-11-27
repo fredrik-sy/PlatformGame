@@ -54,12 +54,12 @@
         {
             _bottomToolbox = new Toolbox()
             {
-                Columns = 35,
+                Columns = 30,
                 LayerDepth = 0.4F,
-                Height = 40,
+                Height = 48,
                 Width = 1330,
                 X = 0,
-                Y = 760
+                Y = 752
             };
 
             _rightToolbox = new Toolbox()
@@ -113,6 +113,7 @@
             LoadDecoration();
             LoadPlayer();
             LoadEnemy();
+            LoadAutumn();
 
             base.LoadContent();
         }
@@ -151,7 +152,7 @@
             World world = new World(Game)
             {
                 Enabled = false,
-                Height = 760,
+                Height = 752,
                 Width = 1330,
                 X = 0,
                 Y = 0
@@ -260,6 +261,16 @@
             }
         }
 
+        private void LoadAutumn()
+        {
+            Door door = new Door(new StillImageAnimationComponent("Autumn\\Element\\Door"));
+            door.LoadContent(Game);
+            ItemWrapper item = new ItemWrapper(door);
+            item.Click += Item_Click;
+            item.LayerDepth = 0.42F;
+            _rightToolbox.Add(item);
+        }
+
         private void LoadDecoration()
         {
             foreach (string s in new string[] { "Crate", "Crystal", "IceBox", "Igloo", "Sign_0", "Sign_1", "SnowMan", "Stone", "Tree_0", "Tree_1" })
@@ -297,29 +308,7 @@
         #region Click Event
         private void AddButton_Click(object sender, EventArgs e)
         {
-            World world = new World(Game)
-            {
-                Enabled = false,
-                Height = 760,
-                Width = 1330,
-                X = 0,
-                Y = 0
-            };
-
-            Dictionary<ButtonState, Rectangle> sourceRectangles = new Dictionary<ButtonState, Rectangle>
-            {
-                [ButtonState.Normal] = new Rectangle(0, 0, 151, 152),
-                [ButtonState.Hover] = new Rectangle(166, 0, 151, 152),
-                [ButtonState.Pressed] = new Rectangle(332, 0, 151, 152),
-                [ButtonState.Disabled] = new Rectangle(498, 0, 151, 152)
-            };
-
-            WorldButtonWrapper worldButton = new WorldButtonWrapper(world)
-            {
-                LayerDepth = 0.42F,
-                Texture = Game.Content.Load<Texture2D>("FantasyGameGUI\\WorldButton"),
-                SourceRectangles = sourceRectangles
-            };
+            WorldButtonWrapper worldButton = CreateWorldButton();
 
             worldButton.Click += WorldButton_Click;
 
@@ -373,6 +362,9 @@
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
+            _bottomToolbox.RemoveAll(i => i is WorldButtonWrapper);
+            _worldButtons.Clear();
+            _activeWorld = null;
             Game.GameState = GameState.StartMenu;
         }
 
