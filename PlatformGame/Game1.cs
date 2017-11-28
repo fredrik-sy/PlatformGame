@@ -27,8 +27,6 @@
             IsMouseVisible = true;
         }
 
-        public static Dictionary<string, Texture2D> Textures { get; } = new Dictionary<string, Texture2D>();
-
         public static Random Random { get; } = new Random();
 
         public GameState GameState
@@ -58,9 +56,6 @@
         protected override void Initialize()
         {
             Services.AddService(typeof(GraphicsDeviceManager), _graphics);
-
-            LoadColorTexture();
-            LoadTexture(Content.RootDirectory);
 
             GameplayManager gameplayManager = new GameplayManager(this);
             LevelEditorManager levelEditorManager = new LevelEditorManager(this);
@@ -123,33 +118,6 @@
         {
             GraphicsDevice.Clear(Color.DarkGray);
             base.Draw(gameTime);
-        }
-
-        private void LoadColorTexture()
-        {
-            Texture2D darkGray = new Texture2D(GraphicsDevice, 1, 1);
-
-            darkGray.SetData(new Color[] { new Color(40, 40, 40) });
-
-            Textures.Add("Color\\DarkGray", darkGray);
-        }
-
-        private void LoadTexture(string path)
-        {
-            foreach (string subdirectory in Directory.GetDirectories(path))
-            {
-                LoadTexture(subdirectory);
-            }
-
-            string[] fileNames = Directory.GetFiles(path, "*.xnb");
-
-            foreach (string fileName in fileNames)
-            {
-                string key = Path.Combine(Path.GetDirectoryName(fileName), Path.GetFileNameWithoutExtension(fileName))
-                                 .Replace(@"Content\", string.Empty);
-
-                Textures[key] = Content.Load<Texture2D>(key);
-            }
         }
     }
 }
