@@ -10,11 +10,11 @@
     using PlatformGame.Gameplay.Components.Templates;
     using PlatformGame.Gameplay.Objects.Templates;
 
-    internal class EnemyCollisionComponent : IComponent
+    internal class LakeCollisionComponent : IComponent
     {
         private List<GameObject> _collisionObjects;
 
-        public EnemyCollisionComponent(List<GameObject> collisionObjects)
+        public LakeCollisionComponent(List<GameObject> collisionObjects)
         {
             _collisionObjects = collisionObjects;
         }
@@ -24,15 +24,19 @@
         public void Update(GameObject gameObject, GameTime gameTime)
         {
             MovableGameObject movableGameObject = gameObject as MovableGameObject;
-            Rectangle bounds = movableGameObject.Bounds;
 
-            foreach (GameObject collisionObject in _collisionObjects)
+            if (movableGameObject.OnGround)
             {
-                if (bounds.Intersects(collisionObject.Bounds))
+                Rectangle bounds = movableGameObject.Bounds;
+
+                foreach (GameObject collisionObject in _collisionObjects)
                 {
-                    if (Algorithm.PixelCollision(movableGameObject, collisionObject))
+                    if (bounds.Intersects(collisionObject.Bounds))
                     {
-                        (gameObject as MovableGameObject).Dead = true;
+                        if (Algorithm.PixelCollision(movableGameObject, collisionObject))
+                        {
+                            (gameObject as MovableGameObject).Dead = true;
+                        }
                     }
                 }
             }

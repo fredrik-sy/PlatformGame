@@ -24,7 +24,6 @@
         private List<GameObject[]> _gameObjectArrays;
         private SpriteBatch _spriteBatch;
         private SnowyBackground _snowyBackground;
-
         private double _timeSincePlayerDied;
 
         public GameplayManager(Game1 game) : base(game)
@@ -67,6 +66,16 @@
 
             _spriteBatch.End();
             base.Draw(gameTime);
+        }
+
+        public void NextLevel()
+        {
+            _gameObjectArrays.RemoveAt(0);
+
+            if (_gameObjectArrays.Count == 0)
+            {
+                Game.GameState = GameState.StartMenu;
+            }
         }
 
         public override void Update(GameTime gameTime)
@@ -125,9 +134,11 @@
 
         private void LoadComponent(GameObject[] gameObjects)
         {
+            List<GameObject> doorObjects = new List<GameObject>();
             List<GameObject> fieldCollisionObjects = new List<GameObject>();
             List<GameObject> enemyCollisionObjects = new List<GameObject>();
             List<GameObject> lakeCollisionObjects = new List<GameObject>();
+            List<GameObject> teleporterObjects = new List<GameObject>();
             Player player = null;
 
             foreach (GameObject gameObject in gameObjects)
@@ -151,6 +162,14 @@
                 {
                     player = gameObject as Player;
                 }
+                else if (gameObject is Door)
+                {
+                    doorObjects.Add(gameObject);
+                }
+                else if (gameObject is Teleporter)
+                {
+                    teleporterObjects.Add(gameObject);
+                }
             }
 
             enemyCollisionObjects.ForEach(e =>
@@ -162,9 +181,12 @@
             });
 
             player?.AddRangeComponent(new FieldCollisionComponent(fieldCollisionObjects),
+                                      new LevelDoorComponent(this, doorObjects),
                                       new MovementComponent(),
                                       new UserInputComponent(),
-                                      new EnemyCollisionComponent(enemyCollisionObjects.Concat(lakeCollisionObjects).ToList()),
+                                      new TeleporterComponent(teleporterObjects),
+                                      new EnemyCollisionComponent(enemyCollisionObjects),
+                                      new LakeCollisionComponent(lakeCollisionObjects),
                                       new CameraFocusComponent());
         }
     }

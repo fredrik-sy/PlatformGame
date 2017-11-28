@@ -114,6 +114,7 @@
             LoadPlayer();
             LoadEnemy();
             LoadAutumn();
+            LoadScienceFiction();
 
             base.LoadContent();
         }
@@ -174,6 +175,15 @@
             };
 
             return worldButton;
+        }
+
+        private void AddGameObjectToToolbox(GameObject gameObject)
+        {
+            gameObject.LoadContent(Game);
+            ItemWrapper item = new ItemWrapper(gameObject);
+            item.Click += Item_Click;
+            item.LayerDepth = 0.42F;
+            _rightToolbox.Add(item);
         }
 
         #region BottomToolbox Content
@@ -243,32 +253,26 @@
             for (int i = 0; i < 16; ++i)
             {
                 Tile tile = new Tile(new StillImageAnimationComponent("Winter\\Tile\\" + i));
-                tile.LoadContent(Game);
-                ItemWrapper item = new ItemWrapper(tile);
-                item.Click += Item_Click;
-                item.LayerDepth = 0.42F;
-                _rightToolbox.Add(item);
+                AddGameObjectToToolbox(tile);
             }
 
             for (int i = 16; i < 18; ++i)
             {
                 Lake lake = new Lake(new StillImageAnimationComponent("Winter\\Tile\\" + i));
-                lake.LoadContent(Game);
-                ItemWrapper item = new ItemWrapper(lake);
-                item.Click += Item_Click;
-                item.LayerDepth = 0.42F;
-                _rightToolbox.Add(item);
+                AddGameObjectToToolbox(lake);
             }
         }
 
         private void LoadAutumn()
         {
             Door door = new Door(new StillImageAnimationComponent("Autumn\\Element\\Door"));
-            door.LoadContent(Game);
-            ItemWrapper item = new ItemWrapper(door);
-            item.Click += Item_Click;
-            item.LayerDepth = 0.42F;
-            _rightToolbox.Add(item);
+            AddGameObjectToToolbox(door);
+        }
+
+        private void LoadScienceFiction()
+        {
+            Teleporter teleporter = new Teleporter(new StillImageAnimationComponent("ScienceFiction\\Object\\Portal"));
+            AddGameObjectToToolbox(teleporter);
         }
 
         private void LoadDecoration()
@@ -276,32 +280,20 @@
             foreach (string s in new string[] { "Crate", "Crystal", "IceBox", "Igloo", "Sign_0", "Sign_1", "SnowMan", "Stone", "Tree_0", "Tree_1" })
             {
                 Decoration decoration = new Decoration(new StillImageAnimationComponent("Winter\\Object\\" + s));
-                decoration.LoadContent(Game);
-                ItemWrapper item = new ItemWrapper(decoration);
-                item.Click += Item_Click;
-                item.LayerDepth = 0.42F;
-                _rightToolbox.Add(item);
+                AddGameObjectToToolbox(decoration);
             }
         }
 
         private void LoadPlayer()
         {
             Player player = new Player(new AdventurerGirlAnimationComponent());
-            player.LoadContent(Game);
-            ItemWrapper item = new ItemWrapper(player);
-            item.Click += Item_Click;
-            item.LayerDepth = 0.42F;
-            _rightToolbox.Add(item);
+            AddGameObjectToToolbox(player);
         }
 
         private void LoadEnemy()
         {
             Enemy enemy = new Enemy(new ZombieAnimationComponent());
-            enemy.LoadContent(Game);
-            ItemWrapper item = new ItemWrapper(enemy);
-            item.Click += Item_Click;
-            item.LayerDepth = 0.42F;
-            _rightToolbox.Add(item);
+            AddGameObjectToToolbox(enemy);
         }
         #endregion
 
