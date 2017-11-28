@@ -74,9 +74,11 @@
 
                         movableGameObject.VelocityY = 0;
                         movableGameObject.MoveAmountY = 0;
-                        break;
+                        return;
                     }
                 }
+
+                movableGameObject.OnGround = false;
             }
         }
     }
