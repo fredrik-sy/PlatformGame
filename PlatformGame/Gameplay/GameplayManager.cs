@@ -187,7 +187,7 @@
                                       new TeleporterComponent(teleporterObjects),
                                       new EnemyCollisionComponent(enemyCollisionObjects),
                                       new LakeCollisionComponent(lakeCollisionObjects),
-                                      new CameraFocusComponent());
+                                      new CameraFocusComponent(new Rectangle(300, 200, 680, 400)));
         }
     }
 }

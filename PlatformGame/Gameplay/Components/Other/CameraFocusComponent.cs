@@ -11,13 +11,11 @@
 
     internal class CameraFocusComponent : IComponent
     {
-        private const int CameraScreenBottom = CameraScreenTop + 400;
-        private const int CameraScreenLeft = 200;
-        private const int CameraScreenRight = CameraScreenLeft + 880;
-        private const int CameraScreenTop = 200;
+        private Rectangle _cameraScreen;
 
-        public CameraFocusComponent()
+        public CameraFocusComponent(Rectangle cameraScreen)
         {
+            _cameraScreen = cameraScreen;
         }
 
         public int Order => 1;
@@ -26,22 +24,22 @@
         {
             Rectangle screenBounds = Camera.WorldToScreen(gameObject.Bounds);
 
-            if (screenBounds.Left < CameraScreenLeft)
+            if (screenBounds.Left < _cameraScreen.Left)
             {
-                Camera.Move(new Vector2(screenBounds.Left - CameraScreenLeft, 0));
+                Camera.Move(new Vector2(screenBounds.Left - _cameraScreen.Left, 0));
             }
-            else if (screenBounds.Right > CameraScreenRight)
+            else if (screenBounds.Right > _cameraScreen.Right)
             {
-                Camera.Move(new Vector2(screenBounds.Right - CameraScreenRight, 0));
+                Camera.Move(new Vector2(screenBounds.Right - _cameraScreen.Right, 0));
             }
 
-            if (screenBounds.Top < CameraScreenTop)
+            if (screenBounds.Top < _cameraScreen.Top)
             {
-                Camera.Move(new Vector2(0, screenBounds.Top - CameraScreenTop));
+                Camera.Move(new Vector2(0, screenBounds.Top - _cameraScreen.Top));
             }
-            else if (screenBounds.Bottom > CameraScreenBottom)
+            else if (screenBounds.Bottom > _cameraScreen.Bottom)
             {
-                Camera.Move(new Vector2(0, screenBounds.Bottom - CameraScreenBottom));
+                Camera.Move(new Vector2(0, screenBounds.Bottom - _cameraScreen.Bottom));
             }
         }
     }
