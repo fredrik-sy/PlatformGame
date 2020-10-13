@@ -76,11 +76,11 @@
             }
         }
 
-        public void Update()
+        public void Update(GameTime gameTime)
         {
             if (Enabled)
             {
-                _snowyBackground.Update();
+                _snowyBackground.Update(gameTime);
 
                 UpdateCamera();
 

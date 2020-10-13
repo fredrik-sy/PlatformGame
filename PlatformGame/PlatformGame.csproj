@@ -45,22 +45,29 @@
   <ItemGroup>
     <Compile Include="Game1.cs" />
     <Compile Include="Gameplay\Camera.cs" />
+    <Compile Include="Gameplay\Components\Algorithm.cs" />
     <Compile Include="Gameplay\Components\Animation\AdventurerGirlAnimationComponent.cs" />
+    <Compile Include="Gameplay\Components\Animation\BulletAnimationComponent.cs" />
     <Compile Include="Gameplay\Components\Animation\StillImageAnimationComponent.cs" />
     <Compile Include="Gameplay\Components\Animation\ZombieAnimationComponent.cs" />
     <Compile Include="Gameplay\Components\Collision\EndRoadCollisionComponent.cs" />
     <Compile Include="Gameplay\Components\Collision\EnemyCollisionComponent.cs" />
     <Compile Include="Gameplay\Components\Collision\FieldCollisionComponent.cs" />
+    <Compile Include="Gameplay\Components\Collision\LakeCollisionComponent.cs" />
     <Compile Include="Gameplay\Components\Input\AiInputComponent.cs" />
     <Compile Include="Gameplay\Components\Input\UserInputComponent.cs" />
     <Compile Include="Gameplay\Components\Other\CameraFocusComponent.cs" />
+    <Compile Include="Gameplay\Components\Other\LevelDoorComponent.cs" />
     <Compile Include="Gameplay\Components\Other\MovementComponent.cs" />
+    <Compile Include="Gameplay\Components\Other\TeleporterComponent.cs" />
     <Compile Include="Gameplay\Components\Templates\IComponent.cs" />
     <Compile Include="Gameplay\Components\Templates\IAnimationComponent.cs" />
     <Compile Include="Gameplay\GameplayManager.cs" />
     <Compile Include="Gameplay\Objects\Decoration.cs" />
+    <Compile Include="Gameplay\Objects\Door.cs" />
     <Compile Include="Gameplay\Objects\Enemy.cs" />
     <Compile Include="Gameplay\Objects\Player.cs" />
+    <Compile Include="Gameplay\Objects\Teleporter.cs" />
     <Compile Include="Gameplay\Objects\Templates\LayerDepth.cs" />
     <Compile Include="Gameplay\Objects\Templates\GameObject.cs" />
     <Compile Include="Gameplay\Objects\Templates\MovableGameObject.cs" />
@@ -100,6 +107,7 @@
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="PlatformGame.ruleset" />
   </ItemGroup>

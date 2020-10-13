@@ -80,7 +80,7 @@
 
         public override void Update(GameTime gameTime)
         {
-            _snowyBackground.Update();
+            _snowyBackground.Update(gameTime);
 
             if (_gameObjectArrays.Count > 0)
             {

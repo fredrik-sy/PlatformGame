@@ -91,7 +91,7 @@
         {
             if (Game.IsActive)
             {
-                _activeWorld?.Update();
+                _activeWorld?.Update(gameTime);
                 _bottomToolbox.Update();
                 _rightToolbox.Update();
             }

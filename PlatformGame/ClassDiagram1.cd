@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PlatformGame.Game1" Collapsed="true">
+    <Position X="25.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAAAAAwAAAAAAAQAAAAAABAACAAAAAAAAIAQ=</HashCode>
+      <FileName>Game1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Program" Collapsed="true">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Camera" Collapsed="true">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAQAAAAIAEAAAgAAAAKAAQCACQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Camera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.GameplayManager" Collapsed="true">
+    <Position X="5.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAEIAAAAgAAAAAAAAAQAAAAAAIgAIABAAAAAAQ=</HashCode>
+      <FileName>Gameplay\GameplayManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.SnowyBackground" Collapsed="true">
+    <Position X="22.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAQAQAAggAICAAQABAAAAAACAAAAAAAQQCAAAQ=</HashCode>
+      <FileName>Gameplay\SnowyBackground.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Algorithm" Collapsed="true">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Components\Algorithm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Animation.AdventurerGirlAnimationComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAAwAAAgAAAAgEAAAAABAAAAAACAIAAIAAQAQ=</HashCode>
+      <FileName>Gameplay\Components\Animation\AdventurerGirlAnimationComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Animation.BulletAnimationComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAAAQ=</HashCode>
+      <FileName>Gameplay\Components\Animation\BulletAnimationComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Animation.StillImageAnimationComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAQAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAAAQ=</HashCode>
+      <FileName>Gameplay\Components\Animation\StillImageAnimationComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Animation.ZombieAnimationComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAAwAAAgAAAAgEAAAAABAAAAAACAIAAIAAQAQ=</HashCode>
+      <FileName>Gameplay\Components\Animation\ZombieAnimationComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Collision.EndRoadCollisionComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Components\Collision\EndRoadCollisionComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Collision.EnemyCollisionComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Components\Collision\EnemyCollisionComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Collision.FieldCollisionComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAgAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Components\Collision\FieldCollisionComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Collision.LakeCollisionComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Components\Collision\LakeCollisionComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Input.AiInputComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Gameplay\Components\Input\AiInputComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Input.UserInputComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAAgACABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Components\Input\UserInputComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Other.CameraFocusComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Components\Other\CameraFocusComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Other.LevelDoorComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="22.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAgAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Components\Other\LevelDoorComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Other.MovementComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Gameplay\Components\Other\MovementComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Components.Other.TeleporterComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Components\Other\TeleporterComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Objects.Decoration" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Objects\Decoration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Objects.Door" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Objects\Door.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Objects.Enemy" Collapsed="true">
+    <Position X="1" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Objects\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Objects.Lake" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Objects\Lake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Objects.Player" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Objects\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Objects.Teleporter" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Objects\Teleporter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Objects.Tile" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Objects\Tile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Objects.Templates.GameObject" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABAIAIoAgABAAAEAAAIAAAAAAAAIAAAAAYhQ=</HashCode>
+      <FileName>Gameplay\Objects\Templates\GameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Objects.Templates.Extension" Collapsed="true">
+    <Position X="20.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Objects\Templates\LayerDepth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Gameplay.Objects.Templates.MovableGameObject" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAQAgAAAAAAAAAAAAAACAAUAAA=</HashCode>
+      <FileName>Gameplay\Objects\Templates\MovableGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.LevelEditor.LevelEditorManager" Collapsed="true">
+    <Position X="0.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BCQAgARgAACAIwAgAAAIAohGAAABAKEgAICCAAABAAQ=</HashCode>
+      <FileName>LevelEditor\LevelEditorManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.LevelEditor.RectangleDrawer" Collapsed="true">
+    <Position X="18.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAAAAIAgAAAAAAAACQAIAAQACAAAAAQBAAAAA=</HashCode>
+      <FileName>LevelEditor\RectangleDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.LevelEditor.Snap" Collapsed="true">
+    <Position X="20.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>LevelEditor\Snap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.LevelEditor.World" Collapsed="true">
+    <Position X="20.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAAAABAAACoAAAQAAAVABAABAAAIAAAAQAACAYgA=</HashCode>
+      <FileName>LevelEditor\World.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.LevelEditor.Wrapper.ButtonWrapper" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LevelEditor\Wrapper\ButtonWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PlatformGame.LevelEditor.Wrapper.ItemWrapper" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABAAAAoAAAAAAAEACCIAAAAAAAAAAAAIAYgA=</HashCode>
+      <FileName>LevelEditor\Wrapper\ItemWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PlatformGame.LevelEditor.Wrapper.WorldButtonWrapper" Collapsed="true">
+    <Position X="2.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>LevelEditor\Wrapper\WorldButtonWrapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PlatformGame.Shared.Manager" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAgAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Shared\Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Shared.GuiToolkit.Button" Collapsed="true">
+    <Position X="1.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABAAAAoAAAAAAAGACAIAAAAAAAAIAACAAYgA=</HashCode>
+      <FileName>Shared\GuiToolkit\Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Shared.GuiToolkit.Toolbox" Collapsed="true">
+    <Position X="17" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAABABAAoAAAAAABEAAAJAAABAAIAIAAAgAYgA=</HashCode>
+      <FileName>Shared\GuiToolkit\Toolbox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Shared.IO.FileHandler" Collapsed="true">
+    <Position X="24" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAEAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shared\IO\FileHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Shared.IO.KeyboardReader" Collapsed="true">
+    <Position X="18.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAAAAAAAAAAAAAAIAAAAAAAAAAQAAAAAABAAA=</HashCode>
+      <FileName>Shared\IO\KeyboardReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.Shared.IO.MouseReader" Collapsed="true">
+    <Position X="24" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAEAAAAAAAAEgAAAAAAEAAAAQAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Shared\IO\MouseReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlatformGame.StartMenu.StartMenuManager" Collapsed="true">
+    <Position X="3" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAAAAAAwAAAAAAAAAAAAAEAAAAAIAgAAAAAgQ=</HashCode>
+      <FileName>StartMenu\StartMenuManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PlatformGame.Gameplay.Components.Templates.IAnimationComponent" Collapsed="true">
+    <Position X="17" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAAAQ=</HashCode>
+      <FileName>Gameplay\Components\Templates\IAnimationComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PlatformGame.Gameplay.Components.Templates.IComponent" Collapsed="true">
+    <Position X="18.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gameplay\Components\Templates\IComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PlatformGame.Shared.GuiToolkit.Templates.IItem" Collapsed="true">
+    <Position X="20.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABAAAAgAAAAAAAEAAAAAAAAAAAAAAAAAAYgA=</HashCode>
+      <FileName>Shared\GuiToolkit\Templates\IItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="PlatformGame.Gameplay.Objects.Templates.LayerDepth" Collapsed="true">
+    <Position X="20.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgABEAAAA=</HashCode>
+      <FileName>Gameplay\Objects\Templates\LayerDepth.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PlatformGame.Shared.GameState" Collapsed="true">
+    <Position X="18.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAABAAAAAgAAAAA=</HashCode>
+      <FileName>Shared\GameState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PlatformGame.Shared.GuiToolkit.ButtonState" Collapsed="true">
+    <Position X="17" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAIAAAAAQAAAAAEAAA=</HashCode>
+      <FileName>Shared\GuiToolkit\ButtonState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
